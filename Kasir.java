@@ -2,14 +2,17 @@ import java.util.Scanner;
 
 public class Kasir {
 
+    // Method notifikasi
     static void notifikasi(){
         System.out.println("\nThanks...");
     }
 
+    // Method hitung biaya
     static int HitungBiaya(int h, int j){
         return h * j;
     }
 
+    // Method tampilkan daftar barang dan mengurutkan barang
     static void urutkan(String data[]){
         for (int i = 0; i < data.length; i++) {
             for (int j = 0; j < data.length - 1; j++){
@@ -26,6 +29,7 @@ public class Kasir {
         }
     }
 
+    // Urutkan nama barang
     static void urutkan(String barang[], int data[]){
         for (int i = 0; i < barang.length; i++) {
             for (int j = 0; j < barang.length - 1; j++){
@@ -35,6 +39,7 @@ public class Kasir {
                     barang[j+1] = temp;
                 }
 
+                // Urutkan harga barang
                     int temp = data[j];
                     data[j] = data[j+1];
                     data[j+1] = temp;
@@ -46,7 +51,10 @@ public class Kasir {
         }
     }
 
+    // Main method
     public static void main(String[] args) {
+
+        // Inisialisasi
         Scanner sc = new Scanner(System.in);
         int pilih = 0;
         String brg [] = {"Tas","Sepatu", "Jaket", "Topi", "Sandal"};
